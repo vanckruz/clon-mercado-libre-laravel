@@ -133,6 +133,36 @@ header.header nav form button.btn{
 	font-family: 'Kaushan Script', cursive;
 	text-align: justify;
 }
+#section_calendar_pub{
+	background: url("../img/fondo_3.png");
+	background-attachment: fixed;
+	width: 100%;
+	min-height: 300px;
+}
+.parent_calendar_img{
+	text-align: right;
+}
+#section_calendar_pub .container .row img{
+	width: 250px;
+	height: 250px;
+	margin-top: 25px;
+	box-shadow: 2px 3px 21px #000;
+}
+#parent_calendar_pub .publicity_text_calendar{
+	margin-top: 8em;
+	margin-left: -3em;
+	background: rgba(255,255,255,.8);
+	box-shadow: 2px 3px 21px #000;
+	z-index: 10;
+	padding: 1em;
+}
+#parent_calendar_pub .publicity_text_calendar h1{
+	font-family: 'Kaushan Script', cursive;
+}
+#parent_calendar_pub .publicity_text_calendar p{
+	font-family: 'Kaushan Script', cursive;
+	text-align: justify;
+}
 .overflow0{
 	overflow: hidden;
 }
@@ -249,5 +279,12 @@ footer div.fullwidth .container .row  ul.list-info li a{
 	}
 	.banner .slogan{
 		font-size: 1.3em;
+	}
+	.parent_calendar_img{
+		text-align: center;
+	}
+	#parent_calendar_pub .publicity_text_calendar{
+		margin-top: 1em;
+		margin-left: 0px;
 	}
 }

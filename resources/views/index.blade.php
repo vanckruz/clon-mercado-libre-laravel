@@ -52,12 +52,30 @@
       <div class="row">
         <div id="miles_platos" class="col-xs-12">
           <div class="publicity_text">
-            <h1>Miles de menus con entrega en tiempo limmite</h1>
+            <h1>Miles de menus con entrega en tiempo limite</h1>
             <p>En nuestro sitio tienes la mas amplia variedad de menus para escojer, estamos conectados con cientos de restauranes cerca de tu zona tu elijes donde te lo entregamos y de que forma pagar.</p>
           </div>
         </div>
       </div>
     </div>
+</div>
+
+<div id="section_calendar_pub">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-xs-12 parent_calendar_img">
+          <img src="{{ asset('img/calendar.jpg') }}" class="img img-circle">
+      </div>
+      <div id="parent_calendar_pub" class="col-lg-8 col-md-8 col-xs-12">
+          <div class="publicity_text_calendar">
+            <h1>Programas tus entregas</h1>
+            <p>
+              Puedes programar las entregas diariamente para tu conveniencia ideal para tener tus comidas garantizadas o eventos especiales
+            </p>
+          </div>        
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class="parent_video">
