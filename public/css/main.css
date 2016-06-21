@@ -176,7 +176,7 @@ header.header nav form button.btn{
 	padding-top: 3em;
 	padding-bottom: 3em;
 	box-shadow: 2px 3px 21px #001;
-	background: url('../img/fondo_3.png');
+	background: url('../img/fondo_8.png');
 	background-attachment: fixed;
 }
 #steps .thumbnail{
@@ -232,16 +232,19 @@ header.header nav form button.btn{
     transform: translate(-50%,-50%);
 }
 footer div.fullwidth{
-	background:linear-gradient(#042EC6,#9E1716);
+	background: url('../img/food.png');
+	background-attachment: fixed;
+	border-top: 5px solid #FF6600;
 }
 hr.pointer_hr{
-	border: 1px dotted #f1f1f1;
+	color: #000;
+	border: 1px dotted #000;
 }
 footer div.fullwidth .container .row .col-xs-12 p{
 	font-size: 2em;
 	font-family: 'Kaushan Script', cursive;
 	text-align: center;
-	color: #FFF;
+	color: #000;
 }
 footer div.fullwidth .container .row .col-xs-12 p span{
 	font-size: .6em;
@@ -258,19 +261,19 @@ footer div.fullwidth .container .row  ul.list-info li{
 	list-style: none;
 	display: block;
 	margin: auto;
-	color: #FFF;
+	color: #000;
 }
 footer div.fullwidth .container .row  ul.list-info li.title-list{
 	margin-top: 15px;
 	margin-bottom: 15px;
-	color: #FFF;
-	border: 1px solid #FFF;
+	color: #000;
+	border: 1px solid #000;
 	padding: 1em;
 	font-weight: 600;
 	font-family: 'Kaushan Script', cursive;
 }
 footer div.fullwidth .container .row  ul.list-info li a{
-	color: #FFF;
+	color: #000;
 }
 
 @media screen and (max-width: 767px){

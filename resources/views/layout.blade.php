@@ -89,7 +89,5 @@
     <script src="{{ asset('js/particles.js') }}"></script>
     <script src="{{ asset('js/typed.js') }}"></script>
     <script src="{{ asset('js/main.js') }}"></script>
-    <script src="{{ asset('js/angular_controller.js') }}"></script>
-
 </body>
 </html>

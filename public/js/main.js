@@ -1,12 +1,10 @@
-particlesJS.load('particles-js', 'js/json/particlesjs-config.json', function() {
-  console.log('callback - particles.js config loaded');
-});
+particlesJS.load('particles-js', 'js/json/particlesjs-config.json');
 
 $(document).on("ready",function(){
 
-	/*$("#section_pub_p").on("scroll",function(){
+	$("#section_calendar_pub").on("scroll",function(){
 		alert("scroll");
-	});*/
+	});
     $(".banner .text_action .t_1").typed({
         strings: [
         	"Revolucionando los servicios",
