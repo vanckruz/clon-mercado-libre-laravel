@@ -34,6 +34,12 @@ body
 {
 	width: 100%;
 }
+.inlineblock{
+	display: inline-block;
+}
+.inlineblock{
+	margin-top: 1em;
+}
 header.header nav{
 	border-radius: 0px !important;
 	background: #FFF059;
@@ -274,6 +280,20 @@ footer div.fullwidth .container .row  ul.list-info li.title-list{
 }
 footer div.fullwidth .container .row  ul.list-info li a{
 	color: #000;
+}
+
+#section_login{
+	background: #FFF;
+	min-height: 300px;
+	padding-bottom: 2em;
+}
+
+#section_login label, #section_login h1{
+	font-family: 'Kaushan Script', cursive;	
+}
+#section_login button[type="submit"]{
+	float: right;
+	margin-top: 1em;
 }
 
 @media screen and (max-width: 767px){

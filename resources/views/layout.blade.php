@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="{{ asset('resources/jquery-ui/jquery-ui.theme.css') }}">
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
     <link type="image/png" rel="icon" href="{{ asset('img/favicon.png') }}" />
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 
 <body>
@@ -37,7 +38,7 @@
             </div>
           </form>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Entrar | Registarse<span class="sr-only">(current)</span></a></li>
+            <li><a href="{{ route('login') }}">Entrar | Registarse<span class="sr-only">(current)</span></a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
