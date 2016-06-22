@@ -37,8 +37,11 @@ body
 .inlineblock{
 	display: inline-block;
 }
-.inlineblock{
+.inlineblock img{
 	margin-top: 1em;
+}
+.white{
+	background: white;
 }
 header.header nav{
 	border-radius: 0px !important;

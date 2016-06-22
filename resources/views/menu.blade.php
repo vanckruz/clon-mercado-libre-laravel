@@ -25,15 +25,10 @@
 							</p>
 							
 							<p>
-								<a id="add_cart" href="" data-token="{{ csrf_token() }}">
-								<button class="dark-grey-button"><img src="{{ asset('images/header/pay-for-u-text.png') }}"><img src="{{ asset('images/header/shopping-car.png') }}"></button>
+								<a id="add_cart" data-token="{{ csrf_token() }}">
+								<button class="dark-grey-button"><b>Agregar</b><img src="{{ asset('images/header/shopping-car.png') }}"></button>
 								</a>
 							</p>
-
-							<a class="fav-icon-hover" data-token="{{ csrf_token() }}">
-								<img src="{{ asset('images/detalles-aviso/mlu-shop-grey.png') }}">
-							 	Agregar a Favoritos
-							</a>
 
 							<p class="color-dark-grey">Compartir por: 
 								<img src="{{ asset('images/detalles-aviso/medium-grey-mail.png') }}">

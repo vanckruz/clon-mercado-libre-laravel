@@ -29,16 +29,21 @@
           <a class="navbar-brand" href="#">Myrestaurant</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <form id="buscador" class="navbar-form navbar-left" role="search">
+          <form id="buscador" action="{{ route('search') }}" method="get" class="navbar-form navbar-left" role="search">
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Search">
+              <input id="busqueda" type="search" class="form-control" placeholder="Search" required="true">
             <button id="btn_search" type="submit" class="btn btn-default">
                 <span class="glyphicon glyphicon-search"></span>
             </button>
             </div>
           </form>
           <ul class="nav navbar-nav navbar-right">
+            @if(Auth::check())
+            <li><a href="{{ route('logout') }}">Salir<span class="sr-only">(current)</span></a></li>
+            <li><a href="{{ route('carrito') }}"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+            @else
             <li><a href="{{ route('login') }}">Entrar | Registarse<span class="sr-only">(current)</span></a></li>
+            @endif
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->

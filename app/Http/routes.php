@@ -12,11 +12,22 @@
 */
 
 Route::get('/', ['uses' => 'IndexController@index', 'as' => 'index']);
+
 Route::get('/social', ['uses' => 'IndexController@login_register', 'as' => 'login']);
+Route::post('/social/signin', ['uses' => 'IndexController@signin', 'as' => 'val_login']);
+Route::post('/social/signup', ['uses' => 'IndexController@signup', 'as' => 'val_register']);
+Route::get('/social/salir', ['uses' => 'IndexController@logout', 'as' => 'logout']);
+
 Route::get('/descubre', ['uses' => 'IndexController@list_last', 'as' => 'list']);
-Route::get('/search/{search}', ['uses' => 'IndexController@search', 'as' => 'search']);
+Route::get('/search/{search?}', ['uses' => 'IndexController@search', 'as' => 'search']);
+
 Route::get('/menu/{id}', ['uses' => 'IndexController@menu', 'as' => 'menu']);
 Route::get('/carrito', ['uses' => 'IndexController@carrito', 'as' => 'carrito']);
-Route::get('/admin', ['uses' => 'IndexController@admin', 'as' => 'admin']);
+Route::post('/add_cart', ['uses' => 'IndexController@add_cart', 'as' => 'add_cart']);
+
+
+Route::get('/admin/login', ['uses' => 'IndexController@admin_login', 'as' => 'admin_login']);
+Route::post('/admin/login/signin', ['uses' => 'IndexController@admin_login', 'as' => 'admin_login']);
+Route::get('/admin/panel', ['uses' => 'IndexController@admin', 'as' => 'admin']);
 
 
