@@ -7,27 +7,27 @@
 			<div class="col-xs-12 col-sm-12 col-md-12">				
 				<div class="col-xs-12 col-sm-12 col-md-5">
 					<div class="col-sm-12 col-md-9 imagen_aviso">
-						<img src="{{ url('img/lapto_menus.png') }}" class="img img-responsive">
+						<img src="{{ asset('images/menus/'.$menu->menu_imagen) }}" class="img img-responsive">
 					</div>
 						
 				</div>
 
 				<div class="col-xs-12 col-sm-12 col-md-7">
-					<h4>Nombre dle menu</h4>
+					<h4>{{ $menu->menu_nombre}}</h4>
 
 					<div class="row">
 						<div class="col-xs-12 col-sm-6 col-md-6">
-							<h3><span class="orange"><img src="{{ asset('images/detalles-aviso/medium-tag.png') }}"> Bs. {{ number_format(1000, 2, ',', '.') }} Bsf.</span></h3>
-							<p class="color-dark-grey">Cantidad:
-								<select id="cantidad_items" name="cantidad">
-									<option value="1">1</option>
-								</select>
-							</p>
-							
+							<h3><span class="orange">
+							<img src="{{ asset('images/detalles-aviso/medium-tag.png') }}"> Bs. {{ number_format($menu->menu_precio, 2, ',', '.') }} Bsf.</span></h3>					
 							<p>
-								<a id="add_cart" data-token="{{ csrf_token() }}">
-								<button class="dark-grey-button"><b>Agregar</b><img src="{{ asset('images/header/shopping-car.png') }}"></button>
+            				@if(Auth::check())					
+							<a href="{{ route('add_cart') }}" data-menuid="{{ $menu->menu_id }}" data-cantidad="1" data-precio="{{ $menu->menu_precio }}" data-carrito="{{ route('carrito') }}" data-token="{{ csrf_token() }}" class="add_cart_inicio">
+									<button class="dark-grey-button">
+									<b>Agregar</b>
+									<img src="{{ asset('images/header/shopping-car.png') }}"></button>
 								</a>
+            				@endif								
+
 							</p>
 
 							<p class="color-dark-grey">Compartir por: 
@@ -61,7 +61,9 @@
 				<div class="col-xs-12 col-sm-12 col-md-8">
 					<p><span class="light-orange">Descripción</span></p>					
 
-					<p class="text_natural_justify">Descripción del menu</p>
+					<p class="text_natural_justify">
+						{{ $menu->menu_desc}}
+					</p>
 
 				</div>
 

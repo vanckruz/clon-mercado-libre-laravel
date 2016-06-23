@@ -10,13 +10,15 @@ class Menu extends Model
 
 	protected $table = "menu";
 
+	protected $primaryKey = 'menu_id';  
+
     protected $fillable = [
         'menu_nombre', 'menu_precio', 'menu_imagen',
     ];
 
 	public function carrito()
     {
-        return $this->belongsTo('App\\Menu','menu_id');
+        return $this->belongsTo('App\\Menu',$this->primaryKey);
     }
 
 }

@@ -83,13 +83,14 @@ class IndexController extends Controller
     	return view('search', compact('menu'));
 	}
 
-	public function menu(){
-    	return view('menu');
+	public function menu($menu_id){
+        $menu = Menu::where("menu_id",$menu_id)->first();
+    	return view('menu',compact('menu'));
 	}
 
 	public function carrito(){
 		$carrito = Carrito::where("user_id",Auth::id())->with('menu')->get();
-		dd($carrito);
+		#dd($carrito);
     	return view('carrito', compact('carrito'));
 	}
 	public function add_cart(Request $request){
@@ -103,6 +104,18 @@ class IndexController extends Controller
     		$carrito->save();
     	}
 	}
+
+    public function pedir(Request $request){
+        
+        $pedido = new Pedido();
+        $pedido->user_id = Auth::id();
+        $pedido->monto_total = $request->total;
+        $pedido->status = 0;
+        $pedido->save();
+
+        return  redirect()->route('carrito')->with("messages","Su pedido ha sido solicitado y sera procesado de inmediato, se le envio un correo con los detales");
+
+    }
 
 	public function admin_login(){
 

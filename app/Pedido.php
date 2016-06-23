@@ -8,7 +8,7 @@ class Pedido extends Model
 {
 	public $timestamps = false;
 
- 	protected $table = "pedido";
+ 	protected $table = "pedidos";
 
     protected $fillable = [
         'user_id', 'monto_total', 'status',

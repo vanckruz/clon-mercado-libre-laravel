@@ -24,6 +24,7 @@ Route::get('/search/{search?}', ['uses' => 'IndexController@search', 'as' => 'se
 Route::get('/menu/{id}', ['uses' => 'IndexController@menu', 'as' => 'menu']);
 Route::get('/carrito', ['uses' => 'IndexController@carrito', 'as' => 'carrito']);
 Route::post('/add_cart', ['uses' => 'IndexController@add_cart', 'as' => 'add_cart']);
+Route::post('/pedir', ['uses' => 'IndexController@pedir', 'as' => 'pedir']);
 
 
 Route::get('/admin/login', ['uses' => 'IndexController@admin_login', 'as' => 'admin_login']);
